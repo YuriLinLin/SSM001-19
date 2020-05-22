@@ -27,6 +27,7 @@ public class UserController {
     public  String doLogin(User user, Model model, HttpSession session){
        User u= userService.login(user);
         if (u!=null){
+            System.out.println("1233");
             //账号密码没问题
             if (u.getFlag().equals("1")){
                 //登录成功把用户名存到session
